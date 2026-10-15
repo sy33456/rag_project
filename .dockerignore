@@ -1,0 +1,10 @@
+# 为什么排除 .env：里面有 API key，进了镜像等于泄露给所有拿到镜像的人
+.env
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.git/
+.github/
+.venv/
+venv/

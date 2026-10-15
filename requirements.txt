@@ -1,0 +1,9 @@
+# 生产模式依赖（轻量模式无需安装任何包）
+numpy>=1.24
+sentence-transformers>=2.3
+chromadb>=0.4
+fastapi>=0.110
+uvicorn>=0.29
+httpx>=0.27        # TestClient 的依赖，API 测试用
+requests>=2.31
+pytest>=8.0
