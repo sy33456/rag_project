@@ -18,3 +18,6 @@ __pycache__/
 
 # WorkBuddy 项目元数据
 .workbuddy/
+
+# 私人笔记（仅本地保留，绝不推送到 GitHub，统一放在 private_notes/ 下）
+private_notes/
