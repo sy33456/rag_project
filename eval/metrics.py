@@ -13,8 +13,16 @@ def hit_rate(ranked: List[int], relevant: set[int]) -> float:
 
 
 def precision_at_k(ranked: List[int], relevant: set[int], k: int) -> float:
+    """top-k 命中数 / 实际返回条数。
+
+    分母用 len(top) 而非硬编码的 k：当检索结果不足 k 条（召回不足）时，
+    按 k 计算会把准确率低估。例如只召回 2 条且都相关，应得 1.0 而非 2/k。
+    """
     top = ranked[:k]
-    return sum(1 for r in top if r in relevant) / k if k else 0.0
+    n = len(top)
+    if n == 0:
+        return 0.0
+    return sum(1 for r in top if r in relevant) / n
 
 
 def mrr(ranked: List[int], relevant: set[int]) -> float:
