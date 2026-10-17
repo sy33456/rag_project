@@ -1,7 +1,6 @@
 """检索：向量召回 + 可选关键词重排。"""
 from __future__ import annotations
-from embedder import LightEmbedder
-import re
+from .embedder import LightEmbedder
 from typing import List, Tuple
 
 
